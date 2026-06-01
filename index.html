@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Kavindu Chandupa | Software Engineering Undergraduate</title>
+    <meta name="description" content="Portfolio of Kavindu Chandupa, Software Engineering Undergraduate & Full-Stack Developer.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ─── Navigation ─── -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>KC<span class="logo-bracket">/&gt;</span></a>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#home"      class="nav-link active"><span class="nav-num">01</span>Home</a></li>
+                <li><a href="#about"     class="nav-link"><span class="nav-num">02</span>About</a></li>
+                <li><a href="#education" class="nav-link"><span class="nav-num">03</span>Education</a></li>
+                <li><a href="#skills"    class="nav-link"><span class="nav-num">04</span>Skills</a></li>
+                <li><a href="#projects"  class="nav-link"><span class="nav-num">05</span>Projects</a></li>
+                <li><a href="#contact"   class="nav-link nav-link--cta">Contact Me</a></li>
+                <div class="nav-menu-socials">
+                    <a href="https://github.com/kAvindu-gh" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </ul>
+            <div class="nav-overlay" id="navOverlay"></div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ─── Hero ─── -->
+        <section id="home" class="hero">
+            <canvas id="particles-canvas"></canvas>
+            <div class="hero-noise"></div>
+
+            <div class="hero-left">
+                <div class="hero-tag reveal-up">
+                    <span class="tag-dot"></span>
+                    <span>Available for internships · 2026</span>
+                </div>
+
+                <h1 class="hero-name reveal-up" style="--d:.1s">
+                    <span class="name-line">Kavindu</span>
+                    <span class="name-line name-accent">Chandupa</span>
+                </h1>
+
+                <div class="hero-role reveal-up" style="--d:.2s">
+                    <span class="role-prefix">I build</span>
+                    <span class="role-typed"><span id="typed"></span><span class="cursor-blink">|</span></span>
+                </div>
+
+                <p class="hero-bio reveal-up" style="--d:.3s">
+                    Second-year SE undergraduate at IIT affiliated with University of Westminster. Passionate about crafting elegant, scalable software — from pixel-perfect frontends to robust backend systems.
+                </p>
+
+                <div class="hero-actions reveal-up" style="--d:.4s">
+                    <a href="#projects" class="cta-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="mailto:kavinduchandupa856@gmail.com" class="cta-secondary">Hire Me</a>
+                </div>
+
+                <div class="hero-socials reveal-up" style="--d:.5s">
+                    <a href="https://github.com/kAvindu-gh" target="_blank" class="h-social"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" class="h-social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="tel:+94769075404" class="h-social"><i class="fas fa-phone"></i></a>
+                    <a href="mailto:kavinduchandupa856@gmail.com" class="h-social"><i class="fas fa-envelope"></i></a>
+                    <div class="social-line"></div>
+                </div>
+            </div>
+
+            <div class="hero-right reveal-right" style="--d:.2s">
+                <div class="hero-img-frame">
+                    <div class="frame-corner fc-tl"></div>
+                    <div class="frame-corner fc-tr"></div>
+                    <div class="frame-corner fc-bl"></div>
+                    <div class="frame-corner fc-br"></div>
+                    <div class="frame-scan"></div>
+                    <img src="assets/kavindu_chandupa.png" alt="Kavindu Chandupa" class="hero-photo">
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="hero-stat-cards">
+                    <div class="stat-card">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Years Coding</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">8+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-cue">
+                <div class="scroll-line"></div>
+                <span>scroll</span>
+            </div>
+        </section>
+
+        <!-- ─── About ─── -->
+        <section id="about" class="about">
+            <div class="about-inner">
+                <div class="about-visual reveal-left">
+                    <div class="av-card">
+                        <div class="av-header">
+                            <span class="av-dot r"></span><span class="av-dot y"></span><span class="av-dot g"></span>
+                            <span class="av-file">about.json</span>
+                        </div>
+                        <div class="av-code">
+                            <div class="code-line"><span class="c-br">{</span></div>
+                            <div class="code-line pl"><span class="c-key">"name"</span><span class="c-cl">:</span> <span class="c-str">"Kavindu Chandupa"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"role"</span><span class="c-cl">:</span> <span class="c-str">"SE Undergraduate"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"location"</span><span class="c-cl">:</span> <span class="c-str">"Kelaniya, Sri Lanka"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"languages"</span><span class="c-cl">:</span> <span class="c-br">[</span><span class="c-str">"English"</span><span class="c-cl">,</span> <span class="c-str">"Sinhala"</span><span class="c-br">]</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"phone"</span><span class="c-cl">:</span> <span class="c-str">"+94 76 907 5404"</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"status"</span><span class="c-cl">:</span> <span class="c-bool">true</span><span class="c-cl">,</span></div>
+                            <div class="code-line pl"><span class="c-key">"open_to"</span><span class="c-cl">:</span> <span class="c-str">"internships"</span></div>
+                            <div class="code-line"><span class="c-br">}</span></div>
+                        </div>
+                        <div class="av-footer">
+                            <span class="av-status"><span class="live-dot"></span> Open to work</span>
+                        </div>
+                    </div>
+                    <div class="about-counters">
+                        <div class="ac-item">
+                            <span class="ac-num" data-target="2">0</span><span class="ac-plus">+</span>
+                            <span class="ac-label">Yrs Coding</span>
+                        </div>
+                        <div class="ac-item">
+                            <span class="ac-num" data-target="4">0</span><span class="ac-plus">+</span>
+                            <span class="ac-label">Stacks</span>
+                        </div>
+                        <div class="ac-item">
+                            <span class="ac-num" data-target="2">0</span><span class="ac-plus">+</span>
+                            <span class="ac-label">Hackathons</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content reveal-right">
+                    <div class="section-eyebrow">WHO I AM</div>
+                    <h2 class="section-heading">About <em>Me</em></h2>
+                    <p class="about-p">I'm a dedicated Software Engineering undergraduate at IIT, affiliated with the University of Westminster. My passion lies in bridging elegant design with robust functionality — building web interfaces people love to use and backend systems that scale.</p>
+                    <p class="about-p">I'm currently seeking an internship to take my academic foundations into real-world practice, contribute to meaningful projects, and grow as a professional developer.</p>
+                    <div class="about-tags">
+                        <span><i class="fas fa-map-marker-alt"></i> Kelaniya, Sri Lanka</span>
+                        <span><i class="fas fa-phone"></i> +94 76 907 5404</span>
+                        <span><i class="fas fa-language"></i> English &amp; Sinhala</span>
+                        <span><i class="fas fa-graduation-cap"></i> SE Undergraduate</span>
+                    </div>
+                    <a href="mailto:kavinduchandupa856@gmail.com" class="cta-primary">
+                        <span>Get In Touch</span><i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Education ─── -->
+        <section id="education" class="education">
+            <div class="section-eyebrow center">BACKGROUND</div>
+            <h2 class="section-heading center">My <em>Education</em></h2>
+
+            <div class="edu-grid">
+                <div class="edu-item reveal-up">
+                    <div class="edu-year">2025 – Present</div>
+                    <div class="edu-connector">
+                        <div class="edu-node"></div>
+                        <div class="edu-line"></div>
+                    </div>
+                    <div class="edu-box">
+                        <div class="edu-box-top">
+                            <div class="edu-icon-circle"><i class="fas fa-university"></i></div>
+                            <div class="edu-meta">
+                                <h3>BSc (Hons) Software Engineering</h3>
+                                <p class="edu-place">University of Westminster <span>via IIT</span></p>
+                            </div>
+                        </div>
+                        <p class="edu-desc">Specialising in full-stack development, algorithms, data structures, and software engineering principles. Currently in second year.</p>
+                        <div class="edu-chips">
+                            <span>Full-Stack Dev</span><span>Algorithms</span><span>Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-item reveal-up" style="--d:.15s">
+                    <div class="edu-year">2020 – 2023</div>
+                    <div class="edu-connector">
+                        <div class="edu-node"></div>
+                        <div class="edu-line"></div>
+                    </div>
+                    <div class="edu-box">
+                        <div class="edu-box-top">
+                            <div class="edu-icon-circle"><i class="fas fa-school"></i></div>
+                            <div class="edu-meta">
+                                <h3>G.C.E. Advanced Level – Physical Science</h3>
+                                <p class="edu-place">Nalanda College</p>
+                            </div>
+                        </div>
+                        <p class="edu-desc">Studied Physics, ICT and Combined Mathematics with distinction. Built a strong analytical and problem-solving foundation.</p>
+                        <div class="edu-chips">
+                            <span>Physics</span><span>ICT</span><span>Combined Maths</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Skills (UNCHANGED) ─── -->
+        <section id="skills" class="skills-section">
+            <div class="skills-bg-glow skills-glow-1"></div>
+            <div class="skills-bg-glow skills-glow-2"></div>
+            <div class="section-title reveal">
+                <span class="section-tag">WHAT I KNOW</span>
+                <h2>Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skill-bars-grid reveal-up">
+                <div class="skill-bar-item" data-pct="90">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-html5"></i> HTML5</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="88" style="--d:.06s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-css3-alt"></i> CSS3</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="85" style="--d:.12s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-js"></i> JavaScript</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="80" style="--d:.18s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-java"></i> Java</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="78" style="--d:.24s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-python"></i> Python</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="78" style="--d:.30s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-server"></i> Node.js</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="75" style="--d:.36s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-mobile-alt"></i> Flutter</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+                <div class="skill-bar-item" data-pct="72" style="--d:.42s">
+                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-code"></i> Dart</span><span class="skill-bar-pct">0%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                </div>
+            </div>
+            <div class="grouped-skills-grid reveal-up">
+                <div class="skill-category-card glass">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases &amp; Storage</h3>
+                    <div class="skill-pills"><span class="pill">MongoDB</span><span class="pill">MySQL</span><span class="pill">SQLite</span></div>
+                </div>
+                <div class="skill-category-card glass">
+                    <div class="card-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-pills"><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span><span class="pill">IntelliJ</span><span class="pill">PyCharm</span><span class="pill">Figma</span></div>
+                </div>
+                <div class="skill-category-card glass">
+                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Operating Systems</h3>
+                    <div class="skill-pills"><span class="pill">Windows</span><span class="pill">Linux</span><span class="pill">Android</span><span class="pill">iOS</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ─── Projects ─── -->
+        <section id="projects" class="projects">
+            <div class="section-eyebrow center">WHAT I BUILD</div>
+            <h2 class="section-heading center">Featured <em>Projects</em></h2>
+
+            <div class="projects-list">
+
+                <!-- 01 NutriFlex -->
+                <div class="proj-row reveal-up">
+                    <div class="proj-row-img">
+                        <img src="assets/project_nutriflex.png" alt="NutriFlex" onerror="this.style.display='none';this.closest('.proj-row-img').classList.add('no-img')">
+                        <div class="proj-no-img-icon"><i class="fas fa-apple-alt"></i></div>
+                        <div class="proj-img-overlay">
+                            <a href="https://nutri-flex.com/" target="_blank" class="proj-preview-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/kAvindu-gh/nutriflex" target="_blank" class="proj-preview-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="proj-row-info">
+                        <div class="proj-row-meta">
+                            <span class="proj-idx">01</span>
+                            <span class="proj-tag-cat">Mobile · SDGP</span>
+                            <span class="proj-tag-year">2025/2026</span>
+                        </div>
+                        <h3>NutriFlex</h3>
+                        <p>A mobile nutrition app built specifically for Sri Lankans — because no existing app knows what Mallum or Ambul Thiyal is. Select your daily meal plate from real local food data, track calories, protein, carbs and fat in real time, and get BMI-aware macro targets personalised to your health conditions.</p>
+                        <div class="proj-stack">
+                            <span>Flutter</span><span>Python</span><span>FastAPI</span><span>Firebase</span>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://github.com/kAvindu-gh/nutriflex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://nutri-flex.com/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02 Memory Glitch Runner -->
+                <div class="proj-row proj-row-flip reveal-up" style="--d:.1s">
+                    <div class="proj-row-img">
+                        <img src="assets/project_memory_glitch_runner.png" alt="Memory Glitch Runner" onerror="this.style.display='none';this.closest('.proj-row-img').classList.add('no-img')">
+                        <div class="proj-no-img-icon"><i class="fas fa-gamepad"></i></div>
+                        <div class="proj-img-overlay">
+                            <a href="#" class="proj-preview-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/kAvindu-gh/memory-glitch-runner" target="_blank" class="proj-preview-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="proj-row-info">
+                        <div class="proj-row-meta">
+                            <span class="proj-idx">02</span>
+                            <span class="proj-tag-cat">Web · Game</span>
+                            <span class="proj-tag-year">2026</span>
+                        </div>
+                        <h3>Memory Glitch Runner</h3>
+                        <p>A 2D browser platformer where your failed runs become ghost echoes that help solve puzzles. Jump across bars, avoid falling into lava, and progress through three difficulty levels to reach the final exit.</p>
+                        <div class="proj-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Web Audio API</span>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://github.com/kAvindu-gh/memory-glitch-runner" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03 Climate Actions -->
+                <div class="proj-row reveal-up" style="--d:.2s">
+                    <div class="proj-row-img">
+                        <img src="assets/project_climate_actions.png" alt="Climate Actions Web" onerror="this.style.display='none';this.closest('.proj-row-img').classList.add('no-img')">
+                        <div class="proj-no-img-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="proj-img-overlay">
+                            <a href="https://kavindu-gh.github.io/climate-actions-web/" target="_blank" class="proj-preview-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/kAvindu-gh/climate-actions-web" target="_blank" class="proj-preview-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="proj-row-info">
+                        <div class="proj-row-meta">
+                            <span class="proj-idx">03</span>
+                            <span class="proj-tag-cat">Web</span>
+                            <span class="proj-tag-year">2025</span>
+                        </div>
+                        <h3>Climate Actions Website</h3>
+                        <p>An informational and interactive website raising awareness about climate change and sustainability actions. Built with clean HTML, CSS, and JavaScript with smooth UI interactions and responsive layout.</p>
+                        <div class="proj-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://github.com/kAvindu-gh/climate-actions-web" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://kavindu-gh.github.io/climate-actions-web/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04 -->
+                <div class="proj-row proj-row-flip reveal-up" style="--d:.3s">
+                    <div class="proj-row-img proj-coming">
+                        <div class="proj-coming-inner">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="proj-row-info">
+                        <div class="proj-row-meta">
+                            <span class="proj-idx muted">04</span>
+                            <span class="proj-tag-cat muted">In Progress</span>
+                        </div>
+                        <h3 class="muted-title">Next Project</h3>
+                        <p class="muted-p">A full-stack project currently in the works. Stay tuned — details coming soon.</p>
+                        <div class="proj-coming-dots"><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ─── Contact ─── -->
+        <section id="contact" class="contact">
+            <div class="contact-inner">
+                <div class="contact-left reveal-left">
+                    <div class="section-eyebrow">LET'S TALK</div>
+                    <h2 class="section-heading">Get In <em>Touch</em></h2>
+                    <p class="contact-subtext">I'm actively looking for internship opportunities and exciting projects. Whether you have a question or just want to say hi — my inbox is always open!</p>
+
+                    <div class="contact-items">
+                        <a href="mailto:kavinduchandupa856@gmail.com" class="c-item">
+                            <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">Email</span>
+                                <span class="c-val">kavinduchandupa856@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+94769075404" class="c-item">
+                            <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">Phone</span>
+                                <span class="c-val">+94 76 907 5404</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" class="c-item">
+                            <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">LinkedIn</span>
+                                <span class="c-val">kavindu-chandupa</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/kAvindu-gh" target="_blank" class="c-item">
+                            <div class="c-icon"><i class="fab fa-github"></i></div>
+                            <div class="c-detail">
+                                <span class="c-label">GitHub</span>
+                                <span class="c-val">kAvindu-gh</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <input type="text" id="fname" placeholder=" " required>
+                            <label for="fname">Your Name</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="email" id="femail" placeholder=" " required>
+                            <label for="femail">Email Address</label>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="fsubject" placeholder=" " required>
+                        <label for="fsubject">Subject</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea id="fmsg" rows="5" placeholder=" " required></textarea>
+                        <label for="fmsg">Message</label>
+                    </div>
+                    <button type="submit" class="cta-primary btn-full" id="submitBtn">
+                        <span>Send Message</span><i class="fas fa-paper-plane"></i>
+                    </button>
+                    <p class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ─── Footer ─── -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#home" class="footer-logo"><span class="logo-bracket">&lt;</span>KC<span class="logo-bracket">/&gt;</span></a>
+            <p class="footer-copy">&copy; 2026 Kavindu Chandupa · Built with <span>♥</span></p>
+            <div class="footer-links">
+                <a href="https://github.com/kAvindu-gh" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>
