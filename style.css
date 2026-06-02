@@ -144,6 +144,7 @@ header.scrolled{
     min-height:100vh;display:flex;align-items:center;
     padding:120px 7% 80px;gap:60px;
     position:relative;overflow:hidden;
+    flex-wrap:nowrap;
 }
 #particles-canvas{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero-noise{
@@ -152,8 +153,8 @@ header.scrolled{
     background-size:200px;
 }
 
-/* Left column */
-.hero-left{flex:1;max-width:560px;position:relative;z-index:1}
+/* Left column — always left, order:1 */
+.hero-left{flex:1;max-width:560px;position:relative;z-index:1;order:1}
 .hero-tag{
     display:inline-flex;align-items:center;gap:8px;
     font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;
@@ -195,8 +196,15 @@ header.scrolled{
 .h-social:hover::before{transform:scale(1)}
 .social-line{width:60px;height:1px;background:linear-gradient(to right,rgba(168,85,247,.3),transparent);margin-left:4px}
 
-/* Right column */
-.hero-right{flex:0 0 auto;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:20px}
+/* Right column — always right, order:2, uses own fade-in (not reveal-right) */
+.hero-right{
+    flex:0 0 auto;position:relative;z-index:1;
+    display:flex;flex-direction:column;align-items:center;gap:20px;
+    order:2;
+    opacity:0;
+    animation:heroRightIn .9s cubic-bezier(.22,1,.36,1) .35s forwards;
+}
+@keyframes heroRightIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .hero-img-frame{
     position:relative;
     width:320px;height:380px;
@@ -318,44 +326,158 @@ header.scrolled{
 .about-tags span:hover{border-color:var(--primary);background:rgba(168,85,247,.1)}
 
 /* ════════════════════════════════════════
-   EDUCATION
+   RESUME
 ════════════════════════════════════════ */
-.education{padding:100px 7%;background:var(--bg2)}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1000px;margin:0 auto}
-.edu-item{position:relative}
-.edu-year{
-    font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-    color:var(--primary);margin-bottom:12px;
+.resume-section{
+    padding:100px 7%;background:var(--bg2);
+    position:relative;overflow:hidden;
 }
-.edu-connector{display:none}
-.edu-box{
-    background:var(--bg3);border:1px solid rgba(168,85,247,.1);
-    border-radius:16px;padding:26px;
-    transition:var(--tr);position:relative;overflow:hidden;
+.resume-bg-orb{
+    position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;z-index:0;
 }
-.edu-box::before{
-    content:'';position:absolute;top:0;left:0;right:0;height:2px;
-    background:linear-gradient(90deg,var(--primary),var(--sec));
-    transform:scaleX(0);transform-origin:left;transition:.4s ease;
+.orb1{width:500px;height:500px;top:-100px;left:-150px;background:rgba(124,58,237,.07);animation:orbDrift 18s infinite alternate ease-in-out}
+.orb2{width:400px;height:400px;bottom:-80px;right:-100px;background:rgba(232,121,249,.05);animation:orbDrift 24s infinite alternate-reverse ease-in-out}
+@keyframes orbDrift{from{transform:translate(0,0)}to{transform:translate(40px,60px)}}
+
+.resume-layout{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:64px;align-items:start;
+    max-width:1100px;margin:0 auto;
+    position:relative;z-index:1;
 }
-.edu-box:hover{transform:translateY(-5px);border-color:rgba(168,85,247,.3);box-shadow:0 16px 40px rgba(168,85,247,.1)}
-.edu-box:hover::before{transform:scaleX(1)}
-.edu-box-top{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
-.edu-icon-circle{
-    flex-shrink:0;width:44px;height:44px;border-radius:12px;
+
+/* ── CV Document Mockup ── */
+.resume-preview-wrap{position:relative;display:flex;flex-direction:column;align-items:center}
+.resume-doc{
+    width:100%;max-width:420px;
+    border-radius:14px;overflow:hidden;
+    border:1px solid rgba(168,85,247,.18);
+    box-shadow:0 24px 80px rgba(0,0,0,.5),0 0 0 1px rgba(168,85,247,.05);
+    background:#0c0c1e;
+    transition:transform .4s ease,box-shadow .4s ease;
+}
+.resume-doc:hover{
+    transform:translateY(-8px) rotateX(2deg);
+    box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 60px rgba(168,85,247,.12);
+}
+.resume-doc-topbar{
+    display:flex;align-items:center;gap:10px;
+    padding:11px 16px;
+    background:rgba(168,85,247,.06);
+    border-bottom:1px solid rgba(168,85,247,.1);
+}
+.doc-dots{display:flex;gap:6px}
+.dd{width:10px;height:10px;border-radius:50%}
+.dd.r{background:#ff5f56}.dd.y{background:#ffbd2e}.dd.g{background:#27c93f}
+.doc-filename{
+    flex:1;text-align:center;font-size:.7rem;color:var(--muted);
+    font-family:monospace;display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.doc-filename i{color:#ff5f56;font-size:.75rem}
+.doc-pages{font-size:.65rem;color:rgba(255,255,255,.2)}
+.resume-doc-body{
+    padding:22px 20px;position:relative;min-height:340px;overflow:hidden;
+}
+
+/* Skeleton CV content */
+.cv-header-mock{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.cv-avatar-mock{
+    width:44px;height:44px;border-radius:50%;flex-shrink:0;
+    background:linear-gradient(135deg,rgba(168,85,247,.25),rgba(232,121,249,.15));
+    border:1px solid rgba(168,85,247,.2);
+    animation:skeletonPulse 2s ease-in-out infinite;
+}
+.cv-title-mock{flex:1;display:flex;flex-direction:column;gap:5px}
+.cv-divider{height:1px;background:rgba(168,85,247,.1);margin:14px 0}
+.cv-section-mock{margin-bottom:16px}
+.cv-section-label{
+    font-size:.55rem;font-weight:800;letter-spacing:3px;color:rgba(168,85,247,.4);
+    text-transform:uppercase;margin-bottom:7px;
+}
+.cv-line{
+    height:6px;border-radius:4px;margin-bottom:5px;
+    background:rgba(255,255,255,.06);
+    animation:skeletonPulse 2s ease-in-out infinite;
+}
+.cv-line.thick{height:9px}
+.cv-line.thin{height:4px;opacity:.7}
+.cv-line.w60{width:60%}.cv-line.w70{width:70%}
+.cv-line.w75{width:75%}.cv-line.w80{width:80%}
+.cv-line.w85{width:85%}.cv-line.w90{width:90%}
+.cv-pills-mock{display:flex;flex-wrap:wrap;gap:5px}
+.cv-pills-mock span{
+    height:18px;border-radius:4px;
+    background:rgba(168,85,247,.08);
+    border:1px solid rgba(168,85,247,.1);
+    animation:skeletonPulse 2s ease-in-out infinite;
+}
+.cv-pills-mock span:nth-child(1){width:38px}
+.cv-pills-mock span:nth-child(2){width:46px;animation-delay:.15s}
+.cv-pills-mock span:nth-child(3){width:42px;animation-delay:.3s}
+.cv-pills-mock span:nth-child(4){width:50px;animation-delay:.45s}
+.cv-pills-mock span:nth-child(5){width:36px;animation-delay:.6s}
+@keyframes skeletonPulse{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* Scan line over document */
+.cv-scan-line{
+    position:absolute;left:0;right:0;height:2px;
+    background:linear-gradient(90deg,transparent,rgba(168,85,247,.5),transparent);
+    animation:cvScan 4s ease-in-out infinite;pointer-events:none;
+    box-shadow:0 0 12px rgba(168,85,247,.4);
+}
+@keyframes cvScan{0%{top:0;opacity:1}85%{top:100%;opacity:.3}100%{top:100%;opacity:0}}
+
+.resume-doc-glow{
+    width:70%;height:30px;margin-top:-4px;
+    background:radial-gradient(ellipse,rgba(168,85,247,.25),transparent 70%);
+    filter:blur(12px);align-self:center;
+    animation:glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse{0%,100%{opacity:.6}50%{opacity:1}}
+
+/* ── Resume Info Panel ── */
+.resume-info{}
+.resume-badges{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.r-badge{
+    display:flex;align-items:center;gap:12px;
+    padding:11px 16px;border-radius:10px;
+    background:rgba(14,14,30,.8);border:1px solid rgba(168,85,247,.1);
+    font-size:.82rem;font-weight:600;color:var(--text);
+    transition:var(--tr);
+}
+.r-badge:hover{border-color:rgba(168,85,247,.3);background:rgba(168,85,247,.05);transform:translateX(5px)}
+.r-badge i{color:var(--primary);width:14px;text-align:center;flex-shrink:0}
+
+.resume-desc{font-size:.92rem;color:var(--muted);line-height:1.85;margin-bottom:24px}
+
+.resume-highlights{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.rh-item{
+    display:flex;align-items:center;gap:14px;
+    padding:13px 16px;border-radius:11px;
+    background:rgba(168,85,247,.04);
+    border:1px solid rgba(168,85,247,.08);
+    transition:var(--tr);
+}
+.rh-item:hover{border-color:rgba(168,85,247,.25);background:rgba(168,85,247,.08);transform:translateX(4px)}
+.rh-icon{
+    width:36px;height:36px;border-radius:9px;flex-shrink:0;
     background:linear-gradient(135deg,rgba(168,85,247,.2),rgba(232,121,249,.1));
     display:flex;align-items:center;justify-content:center;
-    font-size:1rem;color:var(--primary);
+    font-size:.85rem;color:var(--primary);
 }
-.edu-meta h3{font-size:.98rem;font-weight:700;color:var(--text);margin-bottom:4px;font-family:var(--fh)}
-.edu-place{font-size:.8rem;color:var(--pri-b);font-weight:600}
-.edu-place span{color:var(--muted);font-weight:400;font-size:.74rem;margin-left:5px}
-.edu-desc{font-size:.84rem;color:var(--muted);line-height:1.7;margin-bottom:12px}
-.edu-chips{display:flex;flex-wrap:wrap;gap:6px}
-.edu-chips span{
-    font-size:.64rem;font-weight:600;padding:3px 10px;border-radius:6px;
-    border:1px solid rgba(168,85,247,.14);color:var(--muted);background:rgba(168,85,247,.04);
+.rh-text{display:flex;flex-direction:column;gap:2px}
+.rh-title{font-size:.84rem;font-weight:700;color:var(--text)}
+.rh-sub{font-size:.74rem;color:var(--muted);font-weight:400}
+
+.resume-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.resume-btn-view{box-shadow:0 8px 28px rgba(168,85,247,.3)}
+.resume-btn-dl{font-size:.88rem;padding:12px 22px}
+
+.resume-note{
+    font-size:.72rem;color:rgba(255,255,255,.2);
+    display:flex;align-items:center;gap:7px;
 }
+.resume-note i{color:rgba(168,85,247,.3)}
 
 /* ════════════════════════════════════════
    SKILLS  (KEPT FROM ORIGINAL — styles only)
@@ -608,7 +730,9 @@ header.scrolled{
     .scroll-cue{display:none}
     .about{padding:80px 5%}
     .about-inner{grid-template-columns:1fr;gap:32px}
-    .education{padding:80px 5%}
+    .resume-section{padding:80px 5%}
+    .resume-layout{grid-template-columns:1fr;gap:36px}
+    .resume-doc{max-width:100%}
     .skills-section{padding:80px 5%}
     .skill-bars-grid{grid-template-columns:1fr;gap:16px}
     .grouped-skills-grid{grid-template-columns:1fr}
