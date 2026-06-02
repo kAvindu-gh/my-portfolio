@@ -188,9 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ── Project image fallback ── */
-    document.querySelectorAll('.proj-row-img img').forEach(img => {
-        img.addEventListener('error', () => { img.style.display = 'none'; });
-        if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event('error'));
+    document.querySelectorAll('.pcard-img img').forEach(img => {
+        const handler = () => img.closest('.pcard-img').classList.add('no-img');
+        img.addEventListener('error', handler);
+        if (img.complete && img.naturalWidth === 0) handler();
     });
 
     /* ── Contact Form ── */
