@@ -161,22 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
             animated = true;
             barItems.forEach((item, idx) => {
                 const fill = item.querySelector('.skill-bar-fill');
-                const pctLabel = item.querySelector('.skill-bar-pct');
                 const targetPct = parseInt(item.dataset.pct, 10);
                 setTimeout(() => {
+                    // Phase 1: race to 100%
                     fill.style.transition = 'width 0.5s cubic-bezier(.4,0,.2,1)';
                     fill.style.width = '100%';
-                    pctLabel.textContent = '100%';
+                    // Phase 2: settle to real value
                     setTimeout(() => {
                         fill.style.transition = 'width 1.2s cubic-bezier(.34,1.1,.64,1)';
                         fill.style.width = targetPct + '%';
-                        let cur = 100;
-                        const step = Math.ceil((100 - targetPct) / 28);
-                        const counter = setInterval(() => {
-                            cur -= step;
-                            if (cur <= targetPct) { cur = targetPct; clearInterval(counter); }
-                            pctLabel.textContent = cur + '%';
-                        }, 32);
                     }, 680);
                 }, idx * 55);
             });
