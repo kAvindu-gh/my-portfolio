@@ -1,566 +1,784 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark" data-accent="violet">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-    <title>Kavindu Chandupa | Software Engineering Undergraduate</title>
-    <meta name="description" content="Portfolio of Kavindu Chandupa, Software Engineering Undergraduate & Full-Stack Developer.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%237c3aed'/><text x='50' y='68' font-family='monospace' font-weight='900' font-size='42' fill='white' text-anchor='middle'>KC</text></svg>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kavindu Chandupa is a Software Engineering undergraduate at the University of Westminster (IIT Sri Lanka), building scalable full-stack web and mobile applications.">
+  <meta name="keywords" content="Kavindu Chandupa, software engineer, full stack developer, mobile developer, Flutter, Python, FastAPI, Sri Lanka, University of Westminster, IIT">
+  <meta name="author" content="Kavindu Chandupa">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Kavindu Chandupa | Software Engineering Undergraduate">
+  <meta property="og:description" content="Full-stack and mobile developer building scalable, real-world digital products.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kavindu Chandupa Portfolio">
+  <meta property="og:url" content="https://kavindu-gh.github.io/my-portfolio/">
+  <meta property="og:image" content="assets/kavindu_chandupa.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://kavindu-gh.github.io/my-portfolio/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=3">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=3">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=3">
+  <link rel="shortcut icon" href="favicon.ico?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Kavindu Chandupa | Full-Stack & Mobile Developer</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kavindu Chandupa",
+      "url": "https://kavindu-gh.github.io/my-portfolio/",
+      "image": "assets/kavindu.jpg",
+      "jobTitle": "Software Engineering Undergraduate",
+      "email": "mailto:kavinduchandupa856@gmail.com",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Westminster"
+      },
+      "sameAs": [
+        "https://github.com/kAvindu-gh",
+        "https://www.linkedin.com/in/kavindu-chandupa-b255212a7/"
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://kavindu-gh.github.io/my-portfolio/",
+      "name": "Kavindu Chandupa Portfolio",
+      "alternateName": [
+        "Kavindu Chandupa",
+        "Kavindu Portfolio"
+      ]
+    }
+  </script>
 </head>
 <body>
+  <div class="loader" aria-hidden="true">
+    <div class="loader-mark"><span>K</span><span>C</span></div>
+    <div class="loader-line"><i></i></div>
+    <p>Initializing portfolio</p>
+  </div>
 
-    <!-- ─── Navigation ─── -->
-    <header id="header">
-        <nav class="navbar">
-            <a href="#home" class="logo"><span class="logo-bracket">&lt;</span>KC<span class="logo-bracket">/&gt;</span></a>
-            <ul class="nav-links" id="navMenu">
-                <li><a href="#home"      class="nav-link active"><span class="nav-num">01</span>Home</a></li>
-                <li><a href="#about"     class="nav-link"><span class="nav-num">02</span>About</a></li>
-                <li><a href="#resume"    class="nav-link"><span class="nav-num">03</span>Resume</a></li>
-                <li><a href="#skills"    class="nav-link"><span class="nav-num">04</span>Skills</a></li>
-                <li><a href="#projects"  class="nav-link"><span class="nav-num">05</span>Projects</a></li>
-                <li><a href="#contact"   class="nav-link nav-link--cta">Contact Me</a></li>
-                <div class="nav-menu-socials">
-                    <a href="https://github.com/kAvindu-gh" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </ul>
-            <div class="nav-overlay" id="navOverlay"></div>
-            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-    </header>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora-one"></span>
+    <span class="aurora-two"></span>
+    <span class="aurora-three"></span>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="pointer-glow" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
-    <main>
-        <!-- ─── Hero ─── -->
-        <section id="home" class="hero">
-            <canvas id="particles-canvas"></canvas>
-            <div class="hero-noise"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-            <div class="hero-left">
-                <div class="hero-tag reveal-up">
-                    <span class="tag-dot"></span>
-                    <span>Available for internships · 2026</span>
-                </div>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <div class="nav-content-wrap">
+        <a class="brand magnetic" href="#home" aria-label="Kavindu Chandupa home">
+          <img class="brand-mark" src="assets/faviconnew.png" alt="Kavindu Chandupa" width="40" height="40">
+          <span class="brand-copy">Kavindu Chandupa<small>Software Engineering Undergraduate</small></span>
+        </a>
 
-                <h1 class="hero-name reveal-up" style="--d:.1s">
-                    <span class="name-line">Kavindu</span>
-                    <span class="name-line name-accent">Chandupa</span>
-                </h1>
-
-                <div class="hero-role reveal-up" style="--d:.2s">
-                    <span class="role-prefix">I build</span>
-                    <span class="role-typed"><span id="typed"></span><span class="cursor-blink">|</span></span>
-                </div>
-
-                <p class="hero-bio reveal-up" style="--d:.3s">
-                    Second-year SE undergraduate at IIT affiliated with University of Westminster. Passionate about crafting elegant, scalable software — from pixel-perfect frontends to robust backend systems.
-                </p>
-
-                <div class="hero-actions reveal-up" style="--d:.4s">
-                    <a href="#projects" class="cta-primary">
-                        <span>View Projects</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="mailto:kavinduchandupa856@gmail.com" class="cta-secondary">Hire Me</a>
-                </div>
-
-                <div class="hero-socials reveal-up" style="--d:.5s">
-                    <a href="https://github.com/kAvindu-gh" target="_blank" class="h-social"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" class="h-social"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="tel:+94769075404" class="h-social"><i class="fas fa-phone"></i></a>
-                    <a href="mailto:kavinduchandupa856@gmail.com" class="h-social"><i class="fas fa-envelope"></i></a>
-                    <div class="social-line"></div>
-                </div>
-            </div>
-
-            <div class="hero-right" style="--d:.2s">
-                <div class="hero-img-frame">
-                    <div class="frame-corner fc-tl"></div>
-                    <div class="frame-corner fc-tr"></div>
-                    <div class="frame-corner fc-bl"></div>
-                    <div class="frame-corner fc-br"></div>
-                    <div class="frame-scan"></div>
-                    <img src="assets/kavindu_chandupa.png" alt="Kavindu Chandupa" class="hero-photo">
-                    <div class="img-overlay"></div>
-                </div>
-                <div class="hero-stat-cards">
-                    <div class="stat-card">
-                        <span class="stat-num">2+</span>
-                        <span class="stat-label">Years Coding</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">4+</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num">8+</span>
-                        <span class="stat-label">Technologies</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-cue">
-                <div class="scroll-line"></div>
-                <span>scroll</span>
-            </div>
-        </section>
-
-        <!-- ─── About ─── -->
-        <section id="about" class="about">
-            <div class="about-inner">
-                <div class="about-visual reveal-left">
-                    <div class="av-card">
-                        <div class="av-header">
-                            <span class="av-dot r"></span><span class="av-dot y"></span><span class="av-dot g"></span>
-                            <span class="av-file">about.json</span>
-                        </div>
-                        <div class="av-code">
-                            <div class="code-line"><span class="c-br">{</span></div>
-                            <div class="code-line pl"><span class="c-key">"name"</span><span class="c-cl">:</span> <span class="c-str">"Kavindu Chandupa"</span><span class="c-cl">,</span></div>
-                            <div class="code-line pl"><span class="c-key">"role"</span><span class="c-cl">:</span> <span class="c-str">"SE Undergraduate"</span><span class="c-cl">,</span></div>
-                            <div class="code-line pl"><span class="c-key">"location"</span><span class="c-cl">:</span> <span class="c-str">"Kelaniya, Sri Lanka"</span><span class="c-cl">,</span></div>
-                            <div class="code-line pl"><span class="c-key">"languages"</span><span class="c-cl">:</span> <span class="c-br">[</span><span class="c-str">"English"</span><span class="c-cl">,</span> <span class="c-str">"Sinhala"</span><span class="c-br">]</span><span class="c-cl">,</span></div>
-                            <div class="code-line pl"><span class="c-key">"phone"</span><span class="c-cl">:</span> <span class="c-str">"+94 76 907 5404"</span><span class="c-cl">,</span></div>
-                            <div class="code-line pl"><span class="c-key">"status"</span><span class="c-cl">:</span> <span class="c-bool">true</span><span class="c-cl">,</span></div>
-                            <div class="code-line pl"><span class="c-key">"open_to"</span><span class="c-cl">:</span> <span class="c-str">"internships"</span></div>
-                            <div class="code-line"><span class="c-br">}</span></div>
-                        </div>
-                    </div>
-                    <div class="about-counters">
-                        <div class="ac-item">
-                            <span class="ac-num" data-target="2">0</span><span class="ac-plus">+</span>
-                            <span class="ac-label">Yrs Coding</span>
-                        </div>
-                        <div class="ac-item">
-                            <span class="ac-num" data-target="4">0</span><span class="ac-plus">+</span>
-                            <span class="ac-label">Stacks</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-content reveal-right">
-                    <div class="section-title left-align">
-                        <span class="section-tag">WHO I AM</span>
-                        <h2>About <span class="gradient-text">Me</span></h2>
-                    </div>
-                    <p class="about-p">I'm a dedicated Software Engineering undergraduate at IIT, affiliated with the University of Westminster. My passion lies in bridging elegant design with robust functionality — building web interfaces people love to use and backend systems that scale.</p>
-                    <p class="about-p">I'm currently seeking an internship to take my academic foundations into real-world practice, contribute to meaningful projects, and grow as a professional developer.</p>
-                    <div class="about-tags">
-                        <span><i class="fas fa-map-marker-alt"></i> Kelaniya, Sri Lanka</span>
-                        <span><i class="fas fa-phone"></i> +94 76 907 5404</span>
-                        <span><i class="fas fa-language"></i> English &amp; Sinhala</span>
-                        <span><i class="fas fa-graduation-cap"></i> SE Undergraduate</span>
-                    </div>
-                    <a href="mailto:kavinduchandupa856@gmail.com" class="cta-primary">
-                        <span>Get In Touch</span><i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ─── Resume ─── -->
-        <section id="resume" class="resume-section">
-            <div class="resume-bg-orb orb1"></div>
-
-            <div class="section-title reveal">
-                <span class="section-tag">MY CREDENTIALS</span>
-                <h2>Resume &amp; <span class="gradient-text">Experience</span></h2>
-            </div>
-
-            <div class="resume-layout">
-
-                <!-- Left: CV mockup -->
-                <div class="resume-preview-wrap reveal-left">
-                    <div class="resume-doc">
-                        <div class="resume-doc-topbar">
-                            <div class="doc-dots">
-                                <span class="dd r"></span><span class="dd y"></span><span class="dd g"></span>
-                            </div>
-                            <span class="doc-filename"><i class="fas fa-file-pdf"></i> Kavindu_Chandupa_CV.pdf</span>
-                            <div class="doc-pages">1 / 1</div>
-                        </div>
-                        <div class="resume-doc-body">
-                            <div class="cv-header-mock">
-                                <div class="cv-avatar-mock"></div>
-                                <div class="cv-title-mock">
-                                    <div class="cv-line thick w80"></div>
-                                    <div class="cv-line w60"></div>
-                                    <div class="cv-line thin w90"></div>
-                                </div>
-                            </div>
-                            <div class="cv-divider"></div>
-                            <div class="cv-section-mock">
-                                <div class="cv-section-label">EDUCATION</div>
-                                <div class="cv-line w70"></div>
-                                <div class="cv-line thin w85"></div>
-                                <div class="cv-line thin w60"></div>
-                            </div>
-                            <div class="cv-section-mock">
-                                <div class="cv-section-label">SKILLS</div>
-                                <div class="cv-pills-mock">
-                                    <span></span><span></span><span></span><span></span><span></span>
-                                </div>
-                            </div>
-                            <div class="cv-section-mock">
-                                <div class="cv-section-label">PROJECTS</div>
-                                <div class="cv-line w75"></div>
-                                <div class="cv-line thin w90"></div>
-                                <div class="cv-line thin w65"></div>
-                            </div>
-                            <div class="cv-section-mock">
-                                <div class="cv-section-label">CONTACT</div>
-                                <div class="cv-line w55"></div>
-                                <div class="cv-line thin w70"></div>
-                            </div>
-                            <div class="cv-scan-line"></div>
-                        </div>
-                    </div>
-                    <div class="resume-doc-glow"></div>
-                </div>
-
-                <!-- Right: minimal info + CTA -->
-                <div class="resume-info reveal-right">
-
-                    <div class="resume-tagline">
-                        <h3>Kavindu Chandupa</h3>
-                        <p>Software Engineering Undergraduate at IIT · University of Westminster. Seeking an internship to contribute and grow in a professional environment.</p>
-                    </div>
-
-                    <div class="resume-cta-group">
-                        <a href="assets/Kavindu_Chandupa_CV.pdf" target="_blank" class="resume-cta-view">
-                            <i class="fas fa-eye"></i> View Resume
-                        </a>
-                        <a href="assets/Kavindu_Chandupa_CV.pdf" download="Kavindu_Chandupa_CV.pdf" class="resume-cta-dl">
-                            <i class="fas fa-download"></i> Download Resume
-                        </a>
-                    </div>
-
-                    <div class="resume-divider"></div>
-
-                    <div class="resume-meta-row">
-                        <div class="resume-meta-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span><b>Degree</b> · BSc (Hons) Software Engineering</span>
-                        </div>
-                        <div class="resume-meta-item">
-                            <i class="fas fa-university"></i>
-                            <span><b>University</b> · University of Westminster via IIT</span>
-                        </div>
-                        <div class="resume-meta-item">
-                            <i class="fas fa-circle" style="color:#4ade80;font-size:.5rem"></i>
-                            <span><b>Status</b> · Open to internships · 2026</span>
-                        </div>
-                    </div>
-
-                    <div class="resume-updated">
-                        <i class="fas fa-clock"></i> Last updated · June 2026
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ─── Skills ─── -->
-        <section id="skills" class="skills-section">
-            <div class="skills-bg-glow skills-glow-1"></div>
-            <div class="skills-bg-glow skills-glow-2"></div>
-            <div class="section-title reveal">
-                <span class="section-tag">WHAT I KNOW</span>
-                <h2>Technical <span class="gradient-text">Skills</span></h2>
-            </div>
-
-            <!-- No percentage labels — bars only -->
-            <div class="skill-bars-grid reveal-up">
-                <div class="skill-bar-item" data-pct="85">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-html5"></i> HTML5</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="85" style="--d:.06s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-css3-alt"></i> CSS3</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="70" style="--d:.12s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-js"></i> JavaScript</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="75" style="--d:.18s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-java"></i> Java</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="78" style="--d:.24s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-python"></i> Python</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="70" style="--d:.30s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="75" style="--d:.36s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-mobile-alt"></i> Flutter &amp; Dart</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="65" style="--d:.42s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-fire"></i> Firebase</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="65" style="--d:.48s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-database"></i> SQL</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="30" style="--d:.54s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-react"></i> React</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="25" style="--d:.60s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fas fa-database"></i> PostgreSQL</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-                <div class="skill-bar-item" data-pct="25" style="--d:.66s">
-                    <div class="skill-bar-header"><span class="skill-bar-name"><i class="fab fa-docker"></i> Docker</span></div>
-                    <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
-                </div>
-            </div>
-
-            <div class="grouped-skills-grid reveal-up">
-                <div class="skill-category-card glass">
-                    <div class="card-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Databases &amp; Backend</h3>
-                    <div class="skill-pills">
-                        <span class="pill">Firebase</span><span class="pill">MySQL</span><span class="pill">SQLite</span>
-                        <span class="pill">PostgreSQL</span><span class="pill">FastAPI</span>
-                    </div>
-                </div>
-                <div class="skill-category-card glass">
-                    <div class="card-icon"><i class="fas fa-wrench"></i></div>
-                    <h3>Dev Tools &amp; Workflow</h3>
-                    <div class="skill-pills">
-                        <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">VS Code</span>
-                        <span class="pill">IntelliJ</span><span class="pill">Postman</span><span class="pill">Docker</span>
-                        <span class="pill">Figma</span><span class="pill">Notion</span>
-                    </div>
-                </div>
-                <div class="skill-category-card glass">
-                    <div class="card-icon"><i class="fas fa-desktop"></i></div>
-                    <h3>Platforms &amp; Environments</h3>
-                    <div class="skill-pills">
-                        <span class="pill">Windows</span><span class="pill">Android</span>
-                        <span class="pill">iOS</span><span class="pill">PyCharm</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ─── Projects ─── -->
-        <section id="projects" class="projects">
-            <div class="section-title reveal">
-                <span class="section-tag">WHAT I BUILD</span>
-                <h2>Featured <span class="gradient-text">Projects</span></h2>
-            </div>
-
-            <div class="proj-cards">
-
-                <!-- 01 NutriFlex -->
-                <div class="proj-feat reveal-up">
-                    <div class="proj-feat-img">
-                        <img src="assets/project_nutriflex.png" alt="NutriFlex" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
-                        <div class="proj-feat-noimg"><i class="fas fa-apple-alt"></i></div>
-                        <div class="proj-feat-num">01</div>
-                    </div>
-                    <div class="proj-feat-info">
-                        <div class="proj-feat-meta">
-                            <span class="proj-feat-cat">Mobile · SDGP</span>
-                            <span class="proj-feat-year">2025/26</span>
-                        </div>
-                        <h3>NutriFlex</h3>
-                        <p>A mobile nutrition app built specifically for Sri Lankans — because no existing app knows what Mallum or Ambul Thiyal is. Select your daily meal plate from real local food data, track calories, protein, carbs and fat in real time, and get BMI-aware macro targets personalised to your health conditions.</p>
-                        <div class="proj-feat-stack">
-                            <span>Flutter</span><span>Python</span><span>FastAPI</span><span>Firebase</span>
-                        </div>
-                        <div class="proj-feat-links">
-                            <a href="https://github.com/kAvindu-gh/nutriflex" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.sdgp.lk/project/db34acb8-ec0f-4092-a289-74eddfeec8b4" target="_blank"><i class="fas fa-globe"></i> Sdgp.lk</a>
-                            <a href="https://nutri-flex.com/" target="_blank" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Landing Page</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 02 Memory Glitch Runner -->
-                <div class="proj-feat proj-feat--flip reveal-up" style="--d:.1s">
-                    <div class="proj-feat-img">
-                        <img src="assets/project_memory_glitch_runner.png" alt="Memory Glitch Runner" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
-                        <div class="proj-feat-noimg"><i class="fas fa-gamepad"></i></div>
-                        <div class="proj-feat-num">02</div>
-                    </div>
-                    <div class="proj-feat-info">
-                        <div class="proj-feat-meta">
-                            <span class="proj-feat-cat">Web · Game</span>
-                            <span class="proj-feat-year">2026</span>
-                        </div>
-                        <h3>Memory Glitch Runner</h3>
-                        <p>A 2D browser platformer where your failed runs become ghost echoes that help solve puzzles. Jump across bars, avoid falling into lava, and progress through three progressively harder difficulty levels to reach the final exit. Built entirely with vanilla JavaScript and the Web Audio API.</p>
-                        <div class="proj-feat-stack">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Web Audio API</span>
-                        </div>
-                        <div class="proj-feat-links">
-                            <a href="https://github.com/kAvindu-gh/memory-glitch-runner" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 03 Climate Actions -->
-                <div class="proj-feat reveal-up" style="--d:.2s">
-                    <div class="proj-feat-img">
-                        <img src="assets/project_climate_actions.png" alt="Climate Actions Web" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
-                        <div class="proj-feat-noimg"><i class="fas fa-leaf"></i></div>
-                        <div class="proj-feat-num">03</div>
-                    </div>
-                    <div class="proj-feat-info">
-                        <div class="proj-feat-meta">
-                            <span class="proj-feat-cat">Web</span>
-                            <span class="proj-feat-year">2025</span>
-                        </div>
-                        <h3>Climate Actions Website</h3>
-                        <p>An informational and interactive website raising awareness about climate change and sustainability actions. Features a clean responsive layout, animated sections, and smooth UI interactions — built entirely with pure HTML, CSS and JavaScript without any external libraries.</p>
-                        <div class="proj-feat-stack">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                        </div>
-                        <div class="proj-feat-links">
-                            <a href="https://github.com/kAvindu-gh/climate-actions-web" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://kavindu-gh.github.io/climate-actions-web/" target="_blank" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 04 NutriFlex Landing Page -->
-                <div class="proj-feat proj-feat--flip reveal-up" style="--d:.1s">
-                    <div class="proj-feat-img">
-                        <img src="assets/project_nutriflex_landing_page.png" alt="NutriFlex Landing Page" onerror="this.style.display='none';this.closest('.proj-feat-img').classList.add('no-img')">
-                        <div class="proj-feat-noimg"><i class="fas fa-gamepad"></i></div>
-                        <div class="proj-feat-num">04</div>
-                    </div>
-                    <div class="proj-feat-info">
-                        <div class="proj-feat-meta">
-                            <span class="proj-feat-cat">Web</span>
-                            <span class="proj-feat-year">2025/26</span>
-                        </div>
-                        <h3>NutriFlex Landing Page</h3>
-                        <p>A modern and responsive landing page developed for NutriFlex, a nutrition and meal-planning mobile application. Designed with a premium user interface, the website showcases app features, health-tracking tools, 
-                            and personalized nutrition solutions while delivering a seamless experience across desktop and mobile devices.</p>
-                        <div class="proj-feat-stack">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-                        </div>
-                        <div class="proj-feat-links">
-                            <a href="https://github.com/kAvindu-gh/nutriflex-landing-page" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://nutri-flex.com/" target="_blank" class="proj-feat-live"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 04 Coming Soon -->
-                <div class="proj-feat proj-feat--coming reveal-up" style="--d:.3s">
-                    <div class="proj-feat-coming-inner">
-                        <div class="proj-feat-coming-icon"><i class="fas fa-layer-group"></i></div>
-                        <div>
-                            <h3>Flowforge Workflow Builder</h3>
-                            <p>A full-stack project currently in the works — details coming soon.</p>
-                        </div>
-                        <div class="proj-coming-dots"><span></span><span></span><span></span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ─── Contact ─── -->
-        <section id="contact" class="contact">
-            <div class="contact-inner">
-                <div class="contact-left reveal-left">
-                    <div class="section-title left-align">
-                        <span class="section-tag">LET'S TALK</span>
-                        <h2>Get In <span class="gradient-text">Touch</span></h2>
-                    </div>
-                    <p class="contact-subtext">I'm actively looking for internship opportunities and exciting projects. Whether you have a question or just want to say hi — my inbox is always open!</p>
-
-                    <div class="contact-items">
-                        <a href="mailto:kavinduchandupa856@gmail.com" class="c-item">
-                            <div class="c-icon"><i class="fas fa-envelope"></i></div>
-                            <div class="c-detail">
-                                <span class="c-label">Email</span>
-                                <span class="c-val">kavinduchandupa856@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="tel:+94769075404" class="c-item">
-                            <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="c-detail">
-                                <span class="c-label">Phone</span>
-                                <span class="c-val">+94 76 907 5404</span>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" class="c-item">
-                            <div class="c-icon"><i class="fab fa-linkedin-in"></i></div>
-                            <div class="c-detail">
-                                <span class="c-label">LinkedIn</span>
-                                <span class="c-val">kavindu-chandupa</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/kAvindu-gh" target="_blank" class="c-item">
-                            <div class="c-icon"><i class="fab fa-github"></i></div>
-                            <div class="c-detail">
-                                <span class="c-label">GitHub</span>
-                                <span class="c-val">kAvindu-gh</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <form class="contact-form reveal-right" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-field">
-                            <input type="text" id="fname" placeholder=" " required>
-                            <label for="fname">Your Name</label>
-                        </div>
-                        <div class="form-field">
-                            <input type="email" id="femail" placeholder=" " required>
-                            <label for="femail">Email Address</label>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <input type="text" id="fsubject" placeholder=" " required>
-                        <label for="fsubject">Subject</label>
-                    </div>
-                    <div class="form-field">
-                        <textarea id="fmsg" rows="5" placeholder=" " required></textarea>
-                        <label for="fmsg">Message</label>
-                    </div>
-                    <button type="submit" class="cta-primary btn-full" id="submitBtn">
-                        <span>Send Message</span><i class="fas fa-paper-plane"></i>
-                    </button>
-                    <p class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- ─── Footer ─── -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <a href="#home" class="footer-logo"><span class="logo-bracket">&lt;</span>KC<span class="logo-bracket">/&gt;</span></a>
-            <p class="footer-copy">&copy; 2026 develop by <span>Kavindu Chandupa.</span></p>
-            <div class="footer-links">
-                <a href="https://github.com/kAvindu-gh" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#journey">Education Journey</a>
+          <a href="#contact">Contact</a>
         </div>
-    </footer>
 
-    <button id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
-    <script src="script.js"></script>
+        <div class="nav-actions">
+          <button class="icon-button theme-toggle magnetic" type="button" aria-label="Switch color theme">
+            <span class="theme-icon">◐</span>
+          </button>
+          <button class="menu-toggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="nav-bubble-indicator" aria-label="Open navigation" role="button" tabindex="0">
+        <span class="bubble-pulse"></span>
+        <img class="bubble-mark-img" src="assets/faviconnew.png" alt="KC" width="28" height="28">
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker reveal">Hello, world. I’m</p>
+          <h1 class="hero-title reveal">
+            <span>Kavindu</span>
+            <span class="gradient-text">Chandupa.</span>
+          </h1>
+          <p class="hero-role reveal">I build <span id="typingText">full-stack experiences.</span><span class="typing-caret"></span></p>
+          <p class="hero-summary reveal">Software Engineering undergraduate at the University of Westminster through IIT Sri Lanka, focused on full-stack development, mobile experiences, and products that feel as good as they work.</p>
+
+          <div class="hero-actions reveal">
+            <a class="button button-primary magnetic" href="#projects">Explore my work <span>↗</span></a>
+            <a class="button button-secondary magnetic" href="assets/Kavindu_Chandupa_CV.pdf" download="Kavindu_Chandupa_CV.pdf">Download My Resume<span>↓</span></a>
+          </div>
+
+          <div class="hero-social reveal">
+            <span>Find me online</span>
+            <a href="https://github.com/kAvindu-gh" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="profile-orbit">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="profile-frame">
+              <img src="assets/kavindu_chandupa.png" alt="Kavindu Chandupa" width="680" height="680" fetchpriority="high">
+              <div class="profile-shine"></div>
+            </div>
+            <div class="floating-chip chip-code"><span>&lt;/&gt;</span> Full-Stack Developer</div>
+            <div class="floating-chip chip-mobile"><span>◫</span> Software Engineer</div>
+            <div class="floating-chip chip-location"><span>⌖</span> IIT Sri Lanka</div>
+          </div>
+          <div class="availability-card glass-card">
+            <div>
+              <span class="status-dot"></span>
+              <small>Current focus</small>
+            </div>
+            <strong>Building scalable digital products</strong>
+            <div class="mini-stack">
+              <span>FL</span><span>PY</span><span>FS</span><span>DB</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-marquee" aria-label="Technology stack">
+        <div class="marquee-track">
+          <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Flutter/Dart</span><i>✦</i><span>Firebase</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>MySQL</span><i>✦</i><span>Java</span><i>✦</i><span>Git</span><i>✦</i><span>Docker</span><i>✦</i><span>Figma</span><i>✦</i>
+          <span aria-hidden="true">HTML5</span><i aria-hidden="true">✦</i><span aria-hidden="true">CSS3</span><i aria-hidden="true">✦</i><span aria-hidden="true">JavaScript</span><i aria-hidden="true">✦</i><span aria-hidden="true">Python</span><i aria-hidden="true">✦</i><span aria-hidden="true">FastAPI</span><i aria-hidden="true">✦</i><span aria-hidden="true">Flutter/Dart</span><i aria-hidden="true">✦</i><span aria-hidden="true">Firebase</span><i aria-hidden="true">✦</i><span aria-hidden="true">PostgreSQL</span><i aria-hidden="true">✦</i><span aria-hidden="true">MySQL</span><i aria-hidden="true">✦</i><span aria-hidden="true">Java</span><i aria-hidden="true">✦</i><span aria-hidden="true">Git</span><i aria-hidden="true">✦</i><span aria-hidden="true">Docker</span><i aria-hidden="true">✦</i><span aria-hidden="true">Figma</span><i aria-hidden="true">✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-heading reveal">
+        <div><span class="section-index">01</span><span class="section-label">About me</span></div>
+        <h2>Engineering with <span class="gradient-text">curiosity.</span></h2>
+        <p>I enjoy turning ideas into complete, user-friendly software, from the interface people touch to the systems working reliably behind it.</p>
+      </div>
+
+      <div class="about-layout">
+        <article class="story-card glass-card spotlight reveal">
+          <span class="card-tag">My story</span>
+          <h3>From curiosity to complete products.</h3>
+          <p>I am a Software Engineering undergraduate at Informatics Institute of Technology (IIT), affiliated with the University of Westminster. I am deeply passionate about full-stack and mobile development, software architecture, and crafting applications that make an impact.</p>
+          <p>Through academic group projects like NutriFlex and personal work spanning browser engines and workflow platforms, I focus on clean architecture, performance, and user-centric design. I keep learning because every new technology makes the next idea more possible.</p>
+          <div class="story-signature">
+            <span>Kelaniya / Colombo, Sri Lanka</span>
+            <span>Open to global opportunities</span>
+          </div>
+        </article>
+
+        <div class="about-side">
+          <article class="education-card soft-card reveal">
+            <div class="education-icon">U</div>
+            <div>
+              <span class="card-tag">Education</span>
+              <h3>University of Westminster</h3>
+              <p>BEng (Hons) Software Engineering at Informatics Institute of Technology (IIT), Sri Lanka.</p>
+              <span class="degree-focus">Full Stack & Mobile Development</span>
+              <span class="degree-focus">Software Architecture & APIs</span>
+            </div>
+          </article>
+          <article class="principles-card glass-card spotlight reveal">
+            <span class="card-tag">How I work</span>
+            <ul>
+              <li><span>01</span><div><strong>Think in systems</strong><small>Understand the complete product architecture, not just a single view.</small></div></li>
+              <li><span>02</span><div><strong>Design for people</strong><small>Clear interfaces, responsive layouts, and accessible workflows.</small></div></li>
+              <li><span>03</span><div><strong>Build, test & deliver</strong><small>Write clean code, iterate quickly, and ship high-quality results.</small></div></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="stats-grid reveal" aria-label="Portfolio statistics">
+        <div class="stat-card"><strong data-count="6">0</strong><span>Projects completed</span></div>
+        <div class="stat-card"><strong data-count="4">0</strong><span>Certificate groups</span></div>
+        <div class="stat-card"><strong data-count="12">0</strong><span>Core technologies</span></div>
+        <a class="stat-card stat-link" href="https://github.com/kAvindu-gh" target="_blank" rel="noreferrer"><strong>Live</strong><span>GitHub activity ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="section-heading reveal">
+        <div><span class="section-index">02</span><span class="section-label">Capabilities</span></div>
+        <h2>Tools I use to <span class="gradient-text">make ideas real.</span></h2>
+        <p>A growing toolkit across product interfaces, application logic, mobile development, data, and collaborative delivery.</p>
+      </div>
+
+      <div class="skill-tabs reveal" role="tablist" aria-label="Skill categories">
+        <button class="skill-tab active" data-skill-tab="frontend" role="tab" aria-selected="true">Frontend</button>
+        <button class="skill-tab" data-skill-tab="backend" role="tab" aria-selected="false">Backend</button>
+        <button class="skill-tab" data-skill-tab="mobile" role="tab" aria-selected="false">Mobile</button>
+        <button class="skill-tab" data-skill-tab="databases" role="tab" aria-selected="false">Databases</button>
+        <button class="skill-tab" data-skill-tab="tools" role="tab" aria-selected="false">Tools & DevOps</button>
+      </div>
+
+      <div class="skills-stage glass-card reveal">
+        <div class="skill-panel active" data-skill-panel="frontend">
+          <div class="skill-intro"><span>01 / 05</span><h3>Frontend Development</h3><p>Responsive, accessible interfaces with clear interaction and visual polish.</p></div>
+          <div class="skill-list">
+            <div class="skill-item" style="--level:92%"><div><strong>HTML5</strong><span>Semantic structure</span></div><i></i></div>
+            <div class="skill-item" style="--level:88%"><div><strong>CSS3</strong><span>Responsive UI & motion</span></div><i></i></div>
+            <div class="skill-item" style="--level:82%"><div><strong>JavaScript</strong><span>Interactive experiences</span></div><i></i></div>
+            <div class="skill-item" style="--level:78%"><div><strong>UI / UX</strong><span>Product thinking</span></div><i></i></div>
+            <div class="skill-item" style="--level:85%"><div><strong>Figma</strong><span>Interface design</span></div><i></i></div>
+          </div>
+        </div>
+        <div class="skill-panel" data-skill-panel="backend">
+          <div class="skill-intro"><span>02 / 05</span><h3>Backend Development</h3><p>Practical server-side foundations for connected, data-driven products.</p></div>
+          <div class="skill-list">
+            <div class="skill-item" style="--level:86%"><div><strong>Python</strong><span>Application logic</span></div><i></i></div>
+            <div class="skill-item" style="--level:82%"><div><strong>FastAPI</strong><span>High-performance APIs</span></div><i></i></div>
+            <div class="skill-item" style="--level:75%"><div><strong>Java</strong><span>Object-oriented systems</span></div><i></i></div>
+            <div class="skill-item" style="--level:84%"><div><strong>REST APIs</strong><span>Service integration</span></div><i></i></div>
+          </div>
+        </div>
+        <div class="skill-panel" data-skill-panel="mobile">
+          <div class="skill-intro"><span>03 / 05</span><h3>Mobile Development</h3><p>Cross-platform and native mobile experiences with fluid, composable interfaces.</p></div>
+          <div class="skill-list">
+            <div class="skill-item" style="--level:85%"><div><strong>Flutter & Dart</strong><span>Cross-platform mobile apps</span></div><i></i></div>
+            <div class="skill-item" style="--level:80%"><div><strong>Mobile UI Design</strong><span>Clean component layouts</span></div><i></i></div>
+            <div class="skill-item" style="--level:78%"><div><strong>Firebase</strong><span>Auth & real-time sync</span></div><i></i></div>
+            <div class="skill-item" style="--level:82%"><div><strong>API Integration</strong><span>Connected mobile apps</span></div><i></i></div>
+          </div>
+        </div>
+        <div class="skill-panel" data-skill-panel="databases">
+          <div class="skill-intro"><span>04 / 05</span><h3>Databases</h3><p>Structured persistence for applications, prototypes, and production workflows.</p></div>
+          <div class="skill-list">
+            <div class="skill-item" style="--level:78%"><div><strong>PostgreSQL</strong><span>Application databases</span></div><i></i></div>
+            <div class="skill-item" style="--level:78%"><div><strong>Firebase</strong><span>Real-time NoSQL store</span></div><i></i></div>
+            <div class="skill-item" style="--level:76%"><div><strong>MySQL</strong><span>Relational data</span></div><i></i></div>
+            <div class="skill-item" style="--level:74%"><div><strong>SQLite</strong><span>Lightweight persistence</span></div><i></i></div>
+          </div>
+        </div>
+        <div class="skill-panel" data-skill-panel="tools">
+          <div class="skill-intro"><span>05 / 05</span><h3>Tools & Workflow</h3><p>Tools for versioning, containerization, interface design, and shipping work.</p></div>
+          <div class="skill-list">
+            <div class="skill-item" style="--level:88%"><div><strong>Git / GitHub</strong><span>Version control</span></div><i></i></div>
+            <div class="skill-item" style="--level:74%"><div><strong>Docker</strong><span>Containerization</span></div><i></i></div>
+            <div class="skill-item" style="--level:82%"><div><strong>Postman</strong><span>API testing</span></div><i></i></div>
+            <div class="skill-item" style="--level:86%"><div><strong>VS Code & IDEs</strong><span>Development environments</span></div><i></i></div>
+            <div class="skill-item" style="--level:85%"><div><strong>Microsoft Office</strong><span>Word, Excel, PowerPoint</span></div><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-heading section-heading-row reveal">
+        <div>
+          <div><span class="section-index">03</span><span class="section-label">Selected work</span></div>
+          <h2>Projects built to <span class="gradient-text">solve & explore.</span></h2>
+        </div>
+        <p>From a nutrition-focused mobile platform to practical full-stack tools and web experiences.</p>
+      </div>
+
+      <article class="featured-project glass-card spotlight reveal" data-project data-category="mobile backend">
+        <div class="featured-media">
+          <img src="assets/project_nutriflex.png" alt="NutriFlex mobile nutrition and meal-planning platform" width="1200" height="760" loading="lazy">
+          <span class="featured-pill">Featured project</span>
+        </div>
+        <div class="featured-copy">
+          <div class="project-number">01</div>
+          <span class="project-type">Mobile App · Health & Nutrition · SDGP</span>
+          <h3>NutriFlex</h3>
+          <p>A mobile nutrition and meal-planning platform tailored specifically for Sri Lankan users — designed to solve the lack of local food recognition in existing apps. Features personalized macronutrient targets based on health profiles and BMI, meal tracking for local foods, recipe management, and real-time backend integrations via FastAPI and Firebase.</p>
+          <div class="tech-pills"><span>Flutter</span><span>Python</span><span>FastAPI</span><span>Firebase</span></div>
+          <div class="project-actions">
+            <a class="text-link" href="https://nutri-flex.com/" target="_blank" rel="noreferrer">Visit website ↗</a>
+            <a class="text-link" href="https://www.sdgp.lk/project/db34acb8-ec0f-4092-a289-74eddfeec8b4" target="_blank" rel="noreferrer">SDGP profile ↗</a>
+            <a class="text-link muted-link" href="https://github.com/kAvindu-gh/nutriflex" target="_blank" rel="noreferrer">Source code ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-toolbar reveal">
+        <div class="filter-group" aria-label="Filter projects">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="web">Web</button>
+          <button class="filter-button" data-filter="mobile">Mobile</button>
+          <button class="filter-button" data-filter="backend">Full Stack</button>
+          <button class="filter-button" data-filter="desktop">Desktop Apps</button>
+          <button class="filter-button" data-filter="uiux">UI/UX Design</button>
+        </div>
+        <label class="project-search">
+          <span>⌕</span>
+          <input id="projectSearch" type="search" placeholder="Search projects..." autocomplete="off">
+        </label>
+      </div>
+
+      <div class="project-grid" id="projectGrid">
+        <article class="project-card glass-card spotlight reveal" data-project data-category="desktop web" data-title="Memory Glitch Runner 2D Platformer">
+          <div class="project-image">
+            <img src="assets/project_memory_glitch_runner.png" alt="Memory Glitch Runner preview" width="900" height="540" loading="lazy">
+            <a href="https://github.com/kAvindu-gh/memory-glitch-runner" target="_blank" rel="noreferrer" aria-label="Open Memory Glitch Runner Repository">↗</a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">02</span>
+              <span class="project-type">Desktop Game · Vanilla JS</span>
+            </div>
+
+            <h3>Memory Glitch Runner</h3>
+
+            <p>
+              An interactive 2D browser platformer featuring a unique ghost-echo mechanic where previous failed runs become echo clones that assist future attempts. Features obstacle systems, jump physics across bars, lava hazards, and progressive difficulty across 3 levels. Built entirely with vanilla JavaScript and Web Audio API.
+            </p>
+
+            <div class="tech-pills">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Web Audio API</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link" href="https://github.com/kAvindu-gh/memory-glitch-runner" target="_blank" rel="noreferrer">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card spotlight reveal" data-project data-category="web" data-title="Climate Action Awareness Website">
+          <div class="project-image">
+            <img src="assets/project_climate_actions.png" alt="Climate Action Awareness Website preview" width="900" height="540" loading="lazy">
+            <a href="https://kavindu-gh.github.io/climate-actions-web/" target="_blank" rel="noreferrer" aria-label="Open Climate Action Website">↗</a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">03</span>
+              <span class="project-type">Group project · Web</span>
+            </div>
+
+            <h3>Climate Action Website</h3>
+
+            <p>
+              An educational group project promoting climate action through responsive layouts, approachable visuals, and clear calls to action. Served as group leader coordinating project planning, component structuring, and UI styling.
+            </p>
+
+            <div class="tech-pills">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link" href="https://kavindu-gh.github.io/climate-actions-web/" target="_blank" rel="noreferrer">Live demo ↗</a>
+              <a class="text-link muted-link" href="https://github.com/kAvindu-gh/climate-actions-web" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card spotlight reveal" data-project data-category="web backend" data-title="NutriFlex Landing Page">
+          <div class="project-image">
+            <img src="assets/project_nutriflex_landing_page.png" alt="NutriFlex Landing Page preview" width="900" height="540" loading="lazy">
+            <a href="https://nutri-flex.com/" target="_blank" rel="noreferrer" aria-label="Open NutriFlex Landing Page">↗</a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">04</span>
+              <span class="project-type">Full Stack · Landing Page</span>
+            </div>
+
+            <h3>NutriFlex Landing Page</h3>
+
+            <p>
+              A modern and responsive product landing page developed for NutriFlex. Designed with a sleek UI showcasing app features, interactive health-tracking tools, meal planning highlights, and app download links across desktop and mobile devices.
+            </p>
+
+            <div class="tech-pills">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>UI/UX</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link" href="https://nutri-flex.com/" target="_blank" rel="noreferrer">Live demo ↗</a>
+              <a class="text-link muted-link" href="https://github.com/kAvindu-gh/nutriflex-landing-page" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card spotlight reveal" data-project data-category="backend web" data-title="FlowForge Workflow Builder">
+          <div class="project-image">
+            <img src="assets/flowforge.jpg" alt="FlowForge Workflow Builder preview" width="900" height="540" loading="lazy">
+            <a href="https://github.com/kAvindu-gh/flowforge--workflow-builder" target="_blank" rel="noreferrer" aria-label="Open FlowForge Repository">↗</a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">05</span>
+              <span class="project-type">Full Stack · Automation Platform</span>
+            </div>
+
+            <h3>FlowForge Workflow Builder</h3>
+
+            <p>
+              A visual no-code workflow automation platform enabling users to visually create and execute API-driven pipelines through drag-and-drop components, condition nodes, data transformations, and containerized microservices.
+            </p>
+
+            <div class="tech-pills">
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>React</span>
+              <span>Docker</span>
+              <span>GitHub Actions</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link muted-link" href="https://github.com/kAvindu-gh/flowforge--workflow-builder" target="_blank" rel="noreferrer">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card spotlight reveal" data-project data-category="backend web" data-title="Hospital Management System">
+          <div class="project-image">
+            <img src="assets/hospital-system.jpg" alt="Hospital Management System preview" width="900" height="540" loading="lazy">
+            <a href="https://github.com/kAvindu-gh/hospital--management--system" target="_blank" rel="noreferrer" aria-label="Open Hospital Management System Repository">↗</a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">06</span>
+              <span class="project-type">Full Stack · System Architecture</span>
+            </div>
+
+            <h3>Hospital Management System</h3>
+
+            <p>
+              A full-stack hospital management system featuring role-based access control (Admin, Doctor, Patient), automated appointment scheduling, patient medical records management, and RESTful service integration backed by PostgreSQL.
+            </p>
+
+            <div class="tech-pills">
+              <span>FastAPI</span>
+              <span>Python</span>
+              <span>PostgreSQL</span>
+              <span>REST APIs</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link muted-link" href="https://github.com/kAvindu-gh/hospital--management--system" target="_blank" rel="noreferrer">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card spotlight reveal" data-project data-category="web" data-title="Personal Portfolio Website">
+          <div class="project-image">
+            <img src="assets/portfolio-website.jpg" alt="Personal Portfolio Website preview" width="900" height="540" loading="lazy">
+            <a href="https://github.com/kAvindu-gh/my-portfolio" target="_blank" rel="noreferrer" aria-label="Open Personal Portfolio Website">
+              ↗
+            </a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">07</span>
+              <span class="project-type">Web Development · Personal Branding</span>
+            </div>
+
+            <h3>Personal Portfolio Website</h3>
+
+            <p>
+              A modern and responsive portfolio website designed and developed to showcase my projects, technical skills, education, certifications, and achievements. The website features smooth animations, interactive project filtering, a contact section, and a clean user interface to create a professional online presence.
+            </p>
+
+            <div class="tech-pills">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+              <span>UI/UX</span>
+              <span>GitHub Pages</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link muted-link" href="#home" rel="noreferrer">
+                Live Demo ↗
+              </a>
+
+              <a class="text-link muted-link" href="https://github.com/kAvindu-gh/my-portfolio" target="_blank" rel="noreferrer">
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+        </article> 
+
+        <article class="project-card glass-card spotlight reveal" data-project data-category="uiux mobile" data-title="NutriFlex Mobile UI/UX Design">
+          <div class="project-image">
+            <img src="assets/grist1.png" alt="NutriFlex UI/UX Design preview" width="900" height="540" loading="lazy">
+            <a href="https://nutri-flex.com/" target="_blank" rel="noreferrer" aria-label="Open NutriFlex Website">
+              ↗
+            </a>
+          </div>
+
+          <div class="project-card-copy">
+            <div>
+              <span class="project-number">08</span>
+              <span class="project-type">UI/UX Design · Mobile Application</span>
+            </div>
+
+            <h3>NutriFlex – Mobile App UI/UX Project</h3>
+
+            <p>
+              Designed the user interface and user experience for NutriFlex, a mobile nutrition application focused on personalized diet tracking. Created intuitive user flows, modern mobile layouts, and user-centered design solutions to enhance accessibility, engagement, and overall user experience.
+            </p>
+
+            <div class="tech-pills">
+              <span>UI Design</span>
+              <span>UX Research</span>
+              <span>Wireframing</span>
+              <span>Prototyping</span>
+              <span>Mobile Design</span>
+              <span>Figma</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="text-link muted-link" href="https://nutri-flex.com/" target="_blank" rel="noreferrer">
+                Visit Website ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <p class="empty-projects" id="emptyProjects">No projects match that search yet.</p>
+    </section>
+
+    <section class="section certificates" id="certificates">
+      <div class="section-heading reveal">
+        <div><span class="section-index">04</span><span class="section-label">Credentials</span></div>
+        <h2>Always learning. <span class="gradient-text">Always shipping.</span></h2>
+        <p>Formal foundations and focused courses that support my growth across software engineering, Python, and full-stack development.</p>
+      </div>
+
+      <div class="certificate-grid">
+        <article class="certificate-card glass-card spotlight reveal" data-cert-image="assets/pearson-diploma.jpeg" data-cert-title="Diploma in English - Outstanding Performance">
+          <button class="certificate-preview" type="button" aria-label="Preview Diploma in English">
+            <img src="assets/pearson-diploma.jpeg" alt="Diploma in English Certificate" width="800" height="520" loading="lazy">
+            <span>View certificate <i>↗</i></span>
+          </button>
+          <div class="certificate-copy">
+            <span class="issuer">ESOFT Metro Campus</span>
+            <h3>Diploma in English</h3>
+            <p>Comprehensive English communication qualification, recognized for Most Outstanding Performance.</p>
+            <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" rel="noreferrer">Verify credential ↗</a>
+          </div>
+        </article>
+
+        <article class="certificate-card glass-card spotlight reveal" data-cert-image="assets/python-certificate.jpg" data-cert-title="BEng (Hons) Software Engineering Foundations">
+          <button class="certificate-preview" type="button" aria-label="Preview Software Engineering Foundations">
+            <img src="assets/python-certificate.jpg" alt="Software Engineering Foundations Certificate" width="800" height="520" loading="lazy">
+            <span>View certificate <i>↗</i></span>
+          </button>
+          <div class="certificate-copy">
+            <span class="issuer">University of Westminster · IIT</span>
+            <h3>Software Engineering Foundations</h3>
+            <p>Core academic curriculum in software development, data structures, and computer systems.</p>
+            <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" rel="noreferrer">View credentials ↗</a>
+          </div>
+        </article>
+
+        <article class="certificate-card glass-card spotlight reveal" data-cert-image="assets/linkedin-certificates.jpg" data-cert-title="Python Programming Foundations">
+          <button class="certificate-preview" type="button" aria-label="Preview Python Programming Foundations">
+            <img src="assets/linkedin-certificates.jpg" alt="Python Programming Foundations" width="800" height="520" loading="lazy">
+            <span>View certificate <i>↗</i></span>
+          </button>
+          <div class="certificate-copy">
+            <span class="issuer">LinkedIn Learning</span>
+            <h3>Python Programming Foundations</h3>
+            <p>Object-oriented Python development, data processing, backend logic, and API architecture.</p>
+            <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" rel="noreferrer">View credentials ↗</a>
+          </div>
+        </article>
+
+        <article class="certificate-card glass-card spotlight reveal" data-cert-image="assets/ml-certificate.jpg" data-cert-title="Software Engineering & System Design">
+          <button class="certificate-preview" type="button" aria-label="Preview Software Engineering & System Design">
+            <img src="assets/ml-certificate.jpg" alt="Software Engineering & System Design" width="800" height="520" loading="lazy">
+            <span>View certificate <i>↗</i></span>
+          </button>
+          <div class="certificate-copy">
+            <span class="issuer">Online Foundations</span>
+            <h3>System Design & Development</h3>
+            <p>Fundamental architectural principles, algorithmic problem solving, and modern web systems.</p>
+            <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" rel="noreferrer">Verify credential ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section journey" id="journey">
+      <div class="section-heading reveal">
+        <div><span class="section-index">05</span><span class="section-label">Education Journey</span></div>
+        <h2>My Academic <span class="gradient-text">Journey.</span></h2>
+        <p>A continuous path of learning, growth, and technical development in software engineering and information technology.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-period">2025 - Present</div>
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-card glass-card spotlight">
+            <span>Higher Education</span>
+            <h3>BEng (Hons) Software Engineering</h3>
+            <h4>Informatics Institute of Technology (IIT) · University of Westminster</h4>
+            <p>
+              Currently pursuing a Bachelor's degree in Software Engineering, focusing on software development, system design, mobile applications, databases, and full-stack technologies.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-period">2022 - 2024</div>
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-card glass-card spotlight">
+            <span>Diploma</span>
+            <h3>Diploma in English</h3>
+            <h4>ESOFT Metro Campus, Kiribathgoda</h4>
+            <p>
+              Completed comprehensive English communication and professional writing studies, recognized with the award for Most Outstanding Performance.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-period">2023 - 2024</div>
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-card glass-card spotlight">
+            <span>G.C.E Advanced Level</span>
+            <h3>Physical Science Stream with ICT</h3>
+            <h4>Nalanda College, Colombo 10</h4>
+            <p>
+              Successfully completed Advanced Level studies in the Physical Science stream with Information and Communication Technology (ICT - B, Physics - S, Combined Mathematics - S).
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-period">2011 - 2022</div>
+          <div class="timeline-marker"><span></span></div>
+          <div class="timeline-card glass-card spotlight">
+            <span>G.C.E Ordinary Level</span>
+            <h3>9 A Passes (9As)</h3>
+            <h4>St. Joseph's College, Wattala</h4>
+            <p>
+              Completed primary and secondary education with outstanding academic distinction, achieving 9 A grades in G.C.E Ordinary Level.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-shell">
+        <div class="contact-copy reveal">
+          <div><span class="section-index">06</span><span class="section-label">Let’s connect</span></div>
+          <h2>Have an idea?<br><span class="gradient-text">Let’s build it.</span></h2>
+          <p>I’m open to collaborations, freelance projects, and conversations with people building thoughtful products.</p>
+          <div class="contact-direct">
+            <a href="mailto:kavinduchandupa856@gmail.com"><span>Email</span><strong>kavinduchandupa856@gmail.com</strong><i>↗</i></a>
+            <a href="tel:+94769075404"><span>Phone</span><strong>+94 76 907 5404</strong><i>↗</i></a>
+            <a href="https://wa.me/94769075404" target="_blank" rel="noreferrer"><span>WhatsApp</span><strong>Start a quick chat</strong><i>↗</i></a>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal" id="contactForm">
+          <div class="form-top"><span>Send a message</span><i class="status-dot"></i></div>
+          <label><span>Your name</span><input type="text" id="name" name="name" placeholder="How should I address you?" required></label>
+          <label><span>Your email</span><input type="email" id="email" name="email" placeholder="you@company.com" required></label>
+          <label><span>What can we build?</span><textarea id="message" name="message" rows="5" placeholder="Tell me a little about your idea or opportunity..." required></textarea></label>
+          <button class="button button-primary form-submit magnetic" type="submit"><span>Send message</span><i>↗</i></button>
+          <p class="form-note" id="formNote" role="status">This opens your preferred email app. No data is stored.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="brand" href="#home"><img class="brand-mark" src="assets/faviconnew.png" alt="Kavindu Chandupa" width="40" height="40"><span class="brand-copy">Kavindu Chandupa<small>Software Engineering Undergraduate</small></span></a>
+      <p>Designed and developed by Kavindu Chandupa.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/kAvindu-gh" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/kavindu-chandupa-b255212a7/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="currentYear"></span> Kavindu Chandupa</span><span>Kelaniya / Colombo, Sri Lanka · <i class="status-dot"></i> Open to collaborations</span></div>
+  </footer>
+
+  <div class="floating-controls">
+    <button class="control-button music-toggle" type="button" aria-label="Toggle ambient sound" title="Ambient sound"><span>♫</span></button>
+    <button class="control-button palette-toggle" type="button" aria-label="Change accent color" title="Change accent"><span>◉</span></button>
+    <a class="control-button back-to-top" href="#home" aria-label="Back to top" title="Back to top"><span>↑</span></a>
+  </div>
+
+  <div class="accent-picker" id="accentPicker" aria-label="Theme color switcher">
+    <span>Choose accent</span>
+    <button class="accent-swatch active" style="--swatch:#7c3aed" data-accent="violet" aria-label="Violet accent"></button>
+    <button class="accent-swatch" style="--swatch:#06b6d4" data-accent="cyan" aria-label="Cyan accent"></button>
+    <button class="accent-swatch" style="--swatch:#ec4899" data-accent="pink" aria-label="Pink accent"></button>
+    <button class="accent-swatch" style="--swatch:#84cc16" data-accent="lime" aria-label="Lime accent"></button>
+    <button class="accent-close" type="button" aria-label="Close accent picker">✕</button>
+  </div>
+
+  <div class="modal certificate-modal" id="certificateModal" role="dialog" aria-modal="true" aria-labelledby="certificateModalTitle" hidden>
+    <button class="modal-close" type="button" aria-label="Close certificate preview">×</button>
+    <div class="modal-content">
+      <span class="card-tag">Certificate preview</span>
+      <h2 id="certificateModalTitle">Certificate</h2>
+      <img src="" alt="">
+    </div>
+  </div>
+
+  <div class="modal command-modal" id="commandModal" role="dialog" aria-modal="true" aria-labelledby="commandTitle" hidden>
+    <div class="command-box">
+      <div class="command-input-wrap"><span>⌕</span><input id="commandInput" type="text" placeholder="Type a command or jump to..." autocomplete="off"><kbd>ESC</kbd></div>
+      <p id="commandTitle">Quick navigation</p>
+      <div class="command-list" id="commandList">
+        <button data-command-target="#home"><span>⌂</span><strong>Home</strong><kbd>H</kbd></button>
+        <button data-command-target="#about"><span>◎</span><strong>About me</strong><kbd>A</kbd></button>
+        <button data-command-target="#skills"><span>◇</span><strong>Skills</strong><kbd>S</kbd></button>
+        <button data-command-target="#projects"><span>▦</span><strong>Projects</strong><kbd>P</kbd></button>
+        <button data-command-target="#certificates"><span>✦</span><strong>Certificates</strong><kbd>C</kbd></button>
+        <button data-command-target="#journey"><span>⌛</span><strong>Education Journey</strong><kbd>J</kbd></button>
+        <button data-command-target="#contact"><span>↗</span><strong>Contact</strong><kbd>M</kbd></button>
+        <a href="assets/Kavindu_Chandupa_CV.pdf" download="Kavindu_Chandupa_CV.pdf"><span>↓</span><strong>Download résumé</strong><kbd>R</kbd></a>
+      </div>
+      <div class="command-footer"><span>↑↓ Navigate</span><span>↵ Select</span><span>Esc Close</span></div>
+    </div>
+  </div>
+
+  <noscript><div class="noscript">JavaScript is disabled. The content remains available, but interactive effects need JavaScript.</div></noscript>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
